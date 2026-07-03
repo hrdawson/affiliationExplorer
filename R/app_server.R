@@ -7,7 +7,7 @@
 app_server <- function(input, output, session) {
   ## Change maximum upload size
   max_size <- golem::get_golem_options("max_size")
-  if (!is.null(max_size)) options(shiny.maxRequestSize = max_size)
+  if (!is.null(max_size)) options(shiny.maxRequestSize = 100*1024^2)
   
   # Load package data in the session (for testing purpose)
   # data("physeq", package = "affiliationExplorer")
