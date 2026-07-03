@@ -6,7 +6,7 @@
 #' @importFrom dplyr distinct
 app_server <- function(input, output, session) {
   ## Change maximum upload size
-  max_size <- 100*1024^2
+  max_size <- 300*1024^2
   if (!is.null(max_size)) options(shiny.maxRequestSize = 100*1024^2)
   
   # Load package data in the session (for testing purpose)
